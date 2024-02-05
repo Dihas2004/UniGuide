@@ -11,7 +11,7 @@ public class SetNavigationTarget : MonoBehaviour
     [SerializeField]
     private GameObject navTargetObject;
 
-    private bool lineToggle = false;
+    private bool lineToggle = true;
 
     private NavMeshPath path;
     private LineRenderer line;
