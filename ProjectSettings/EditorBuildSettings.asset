@@ -6,16 +6,16 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Ground Floor -1.unity
+    path: Assets/Scenes/Nav - Ground Floor -1.unity
     guid: fce201c36b8f88848ba0046cd45a3968
   - enabled: 1
-    path: Assets/Scenes/Before_login.unity
+    path: Assets/Scenes/before_login.unity
     guid: 7cf38839a68520243a291809e7d75f48
   - enabled: 1
     path: Assets/Scenes/Login.unity
     guid: 652df93a18e37f34b9ec528daf92bb60
   - enabled: 1
-    path: Assets/Scenes/After_login.unity
+    path: Assets/Scenes/after_login.unity
     guid: 63c9a78f8e3df4340a750ab460be52cc
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 0dd403d0388fc6742973c7156e5298d8, type: 2}
