@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "917585095702",
+    "project_id": "uniguide-app",
+    "storage_bucket": "uniguide-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:917585095702:android:78226b1f74417432101937",
+        "android_client_info": {
+          "package_name": "com.DefaultCompany.TestScreen"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCp3rpdB3HFCG95OvYD8WqWjIes_HY5H-Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
