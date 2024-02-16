@@ -5,10 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class ScreenLoader : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public void LoadSceneByName()
+
+    public void RegisterButtonClicked()
+    {
+        SceneManager.LoadScene("Scenes/Register");
+    }
+
+    public void LoginButtonClicked()
     {
         SceneManager.LoadScene("Scenes/Login");
-
     }
+
+    public void NavigationButtonClicked()
+    {
+        SceneManager.LoadScene("Scenes/Nav - Ground Floor -1");
+    }
+
+   
+
 }
