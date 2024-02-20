@@ -51,7 +51,7 @@ public class AuthenticationManager : MonoBehaviour
         if (CheckLoginCredentials(email, password))
         {
             Debug.Log("Login successful");
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(5);
         }
         else
         {
