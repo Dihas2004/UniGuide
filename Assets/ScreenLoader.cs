@@ -21,6 +21,26 @@ public class ScreenLoader : MonoBehaviour
         SceneManager.LoadScene("Scenes/Nav - Ground Floor -1");
     }
 
-   
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene("Scenes/Main Menu");
+    }
+
+    public void GoToSignUp()
+    {
+        SceneManager.LoadScene("Scenes/Register");
+    }
+
+    public void GoToLogIn()
+    {
+        SceneManager.LoadScene("Scenes/Login");
+    }
+
+    public void GoToLHomePage()
+    {
+        SceneManager.LoadScene("Scenes/home page");
+    }
+
+
 
 }
