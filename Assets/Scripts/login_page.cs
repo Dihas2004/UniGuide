@@ -34,11 +34,11 @@ public class AuthenticationManager : MonoBehaviour
 
     public void onClickLogin()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("Scenes/Login");
     }
     public void onClickSignup()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene("Scenes/Register");
     }
 
     
@@ -51,7 +51,7 @@ public class AuthenticationManager : MonoBehaviour
         if (CheckLoginCredentials(email, password))
         {
             Debug.Log("Login successful");
-            SceneManager.LoadScene(5);
+            SceneManager.LoadScene("Scenes/Main Menu");
         }
         else
         {

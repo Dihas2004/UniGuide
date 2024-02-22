@@ -41,6 +41,10 @@ public class ScreenLoader : MonoBehaviour
         SceneManager.LoadScene("Scenes/home page");
     }
 
+    public void GoTo3DLayout()
+    {
+        SceneManager.LoadScene("Scenes/3D Layout");
+    }
 
 
 }
