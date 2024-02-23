@@ -4483,11 +4483,11 @@ MonoBehaviour:
   navigationTargetDropDown: {fileID: 1085158455}
   navigationTargetObjects:
   - Name: FacultyTarget
-    PositionObject: {fileID: 0}
+    PositionObject: {fileID: 907998918}
   - Name: LibraryTarget
-    PositionObject: {fileID: 0}
+    PositionObject: {fileID: 1321999480}
   - Name: StaffTarget
-    PositionObject: {fileID: 0}
+    PositionObject: {fileID: 1396570790}
 --- !u!1 &1002941009
 GameObject:
   m_ObjectHideFlags: 0
