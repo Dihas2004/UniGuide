@@ -4,9 +4,6 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   m_Scenes:
   - enabled: 0
     path: Assets/Scenes/home page.unity
@@ -20,7 +17,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Main Menu.unity
     guid: 322b0eb08b8155b4ba6db7767a42e19c
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Nav - 1st Floor.unity
     guid: aea2423565e1743418576f63983b2e79
   - enabled: 0
@@ -29,21 +26,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Splash Screen.unity
     guid: 98bb2f43462f91a43a0a4fb40d70261b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Nav - Ground Floor -1.unity
     guid: fce201c36b8f88848ba0046cd45a3968
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 0dd403d0388fc6742973c7156e5298d8, type: 2}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: d3423478f52ae3048aaac0d701c5117e, type: 2}
-=======
-  m_Scenes: []
-  m_configObjects: {}
->>>>>>> parent of d14b2c1 (edited)
-=======
-  m_Scenes: []
-  m_configObjects: {}
->>>>>>> parent of d14b2c1 (edited)
-=======
-  m_Scenes: []
-  m_configObjects: {}
->>>>>>> parent of d14b2c1 (edited)
