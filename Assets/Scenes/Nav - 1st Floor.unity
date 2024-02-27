@@ -2652,7 +2652,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: AdministrationTarget
+  m_text: Administration
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3547,7 +3547,7 @@ GameObject:
   - component: {fileID: 907998921}
   - component: {fileID: 907998920}
   m_Layer: 0
-  m_Name: AdministrationTarget
+  m_Name: Administration
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4482,11 +4482,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   navigationTargetDropDown: {fileID: 1085158455}
   navigationTargetObjects:
-  - Name: AdministrationTarget
+  - Name: Administration
     PositionObject: {fileID: 907998918}
-  - Name: LibraryTarget
+  - Name: Library
     PositionObject: {fileID: 1321999480}
-  - Name: FacultyTarget
+  - Name: Faculty
     PositionObject: {fileID: 1396570790}
 --- !u!1 &1002941009
 GameObject:
@@ -5031,11 +5031,11 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: AdministrationTarget
+    - m_Text: Administration
       m_Image: {fileID: 0}
-    - m_Text: LibraryTarget
+    - m_Text: Library
       m_Image: {fileID: 0}
-    - m_Text: FacultyTarget
+    - m_Text: Faculty
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -6125,7 +6125,7 @@ GameObject:
   - component: {fileID: 1321999483}
   - component: {fileID: 1321999482}
   m_Layer: 0
-  m_Name: LibraryTarget
+  m_Name: Library
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6230,7 +6230,7 @@ GameObject:
   - component: {fileID: 1396570793}
   - component: {fileID: 1396570792}
   m_Layer: 0
-  m_Name: FacultyTarget
+  m_Name: Faculty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
