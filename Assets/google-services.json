@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "32934699273",
-    "project_id": "agile-group-142be",
-    "storage_bucket": "agile-group-142be.appspot.com"
+    "project_number": "917585095702",
+    "project_id": "uniguide-app",
+    "storage_bucket": "uniguide-app.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:32934699273:android:0269108e0d116d989233d8",
+        "mobilesdk_app_id": "1:917585095702:android:78226b1f74417432101937",
         "android_client_info": {
           "package_name": "com.DefaultCompany.TestScreen"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDFaVLvCJHijAIE6mSZZTr-v0aFWt2ka9g"
+          "current_key": "AIzaSyCp3rpdB3HFCG95OvYD8WqWjIes_HY5H-Y"
         }
       ],
       "services": {

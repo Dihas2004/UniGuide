@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -205,7 +205,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 112213632}
         m_TargetAssemblyTypeName: BackScreenLoader, Assembly-CSharp
         m_MethodName: GoBack
         m_Mode: 1
@@ -267,7 +267,9 @@ GameObject:
   - component: {fileID: 112213628}
   - component: {fileID: 112213627}
   - component: {fileID: 112213626}
+  - component: {fileID: 112213630}
   - component: {fileID: 112213631}
+  - component: {fileID: 112213632}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -358,6 +360,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &112213630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112213625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c68f4a6324c4314aaa757018849f699, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &112213631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -368,6 +382,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0a25c60689e49e43b50e62ce565e07d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &112213632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112213625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe4c90143be53ce4c9e66a3801c14d64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &179152912
@@ -680,7 +706,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 112213631}
         m_TargetAssemblyTypeName: ScreenLoader, Assembly-CSharp
-        m_MethodName: GoToLogIn
+        m_MethodName: LoginButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -904,8 +930,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 112213631}
-        m_TargetAssemblyTypeName: ScreenLoader, Assembly-CSharp
-        m_MethodName: GoToSignUp
+        m_TargetAssemblyTypeName: ScreenLoaderHomePage, Assembly-CSharp
+        m_MethodName: RegisterButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
