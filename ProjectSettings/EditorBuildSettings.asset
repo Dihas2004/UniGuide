@@ -5,6 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Scenes:
   - enabled: 0
     path: Assets/Scenes/home page.unity
@@ -33,6 +34,10 @@ EditorBuildSettings:
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 0dd403d0388fc6742973c7156e5298d8, type: 2}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: d3423478f52ae3048aaac0d701c5117e, type: 2}
+=======
+  m_Scenes: []
+  m_configObjects: {}
+>>>>>>> parent of d14b2c1 (edited)
 =======
   m_Scenes: []
   m_configObjects: {}
