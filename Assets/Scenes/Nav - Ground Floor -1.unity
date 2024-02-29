@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4419776, g: 0.4849472, b: 0.53876764, a: 1}
+  m_IndirectSpecularColor: {r: 0.44465792, g: 0.4882012, b: 0.54122853, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 8ebe2986eb3ff3e4fb03b48cae944e55, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 3309dfaa8c56f134fbb671776528f932, type: 2}
 --- !u!1 &31801502
 GameObject:
   m_ObjectHideFlags: 0
