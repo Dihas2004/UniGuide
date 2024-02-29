@@ -12,10 +12,13 @@ public class ObjectPlacement : MonoBehaviour
 {
     [SerializeField]
     private GameObject prefab;
+    GameObject obj;
 
     private ARRaycastManager aRRaycastManager;
     private ARPlaneManager aRPlaneManager;
     private List<ARRaycastHit> hits = new List<ARRaycastHit>();
+
+    bool isObjectCreated = false;
 
     // Start is called before the first frame update
     private void Awake()
@@ -49,7 +52,17 @@ public class ObjectPlacement : MonoBehaviour
             foreach (ARRaycastHit hit in hits)
             {
                 Pose pose = hit.pose;
-                GameObject obj = Instantiate(prefab, pose.position, pose.rotation);
+                if (isObjectCreated == false)
+                {
+
+                    obj = Instantiate(prefab, pose.position, pose.rotation);
+                    isObjectCreated = true;
+                }
+                else
+                {
+                    obj.transform.position = pose.position;
+                }
+
             }
 
         }
