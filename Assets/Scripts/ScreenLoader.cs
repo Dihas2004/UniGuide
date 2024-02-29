@@ -50,10 +50,29 @@ public class ScreenLoader : MonoBehaviour
     {
         SceneManager.LoadScene("Scenes/Navigation List");
     }
+
+    public void GoToNavFloorGround()
+    {
+        SceneManager.LoadScene("Scenes/Nav - Ground Floor -1");
+    }
     public void GoToNavFloor1()
     {
-        SceneManager.LoadScene("Scenes/Nav- 1st Floor");
+        SceneManager.LoadScene("Scenes/Nav - 1st Floor");
     }
 
+    public void GoToNavFloor2()
+    {
+        SceneManager.LoadScene("Scenes/Nav - 2nd floor");
+    }
+
+    public void GoToNavFloor3()
+    {
+        SceneManager.LoadScene("Scenes/Nav- 3rd floor");
+    }
+
+    public void GoToNavFloor4()
+    {
+        SceneManager.LoadScene("Scenes/Nav-4th floor");
+    }
 
 }
