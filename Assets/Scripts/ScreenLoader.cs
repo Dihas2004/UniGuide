@@ -46,5 +46,14 @@ public class ScreenLoader : MonoBehaviour
         SceneManager.LoadScene("Scenes/3D Layout");
     }
 
+    public void GoToNavList()
+    {
+        SceneManager.LoadScene("Scenes/Navigation List");
+    }
+    public void GoToNavFloor1()
+    {
+        SceneManager.LoadScene("Scenes/Nav- 1st Floor");
+    }
+
 
 }
