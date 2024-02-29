@@ -1,121 +1,94 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using System.IO;
-using Firebase;
-using Firebase.Auth;
-using Firebase.Extensions;
 using TMPro;
 using UnityEngine.SceneManagement;
+using System.IO;
 
 public class AuthenticationManager : MonoBehaviour
 {
-  
     [SerializeField]
-    public TMP_InputField emailInputField;
-
+    private TMP_InputField emailInputField;
     [SerializeField]
-    public TMP_InputField passwordInputField;
+    private TMP_InputField passwordInputField;
+   
     
-  
+    [SerializeField]
+    private TextMeshProUGUI errorText;
+    
+    // File path to store sign-up information
+    private string filePath;
 
-    public DependencyStatus dependencyStatus;
-    public FirebaseAuth auth;
-    public FirebaseUser user;
-    
-    
+    private string folderName = "TextFiles";
+    private string fileName = "append.txt";
+
     private void Start()
     {
-        Firebase.FirebaseApp.CheckAndFixDependenciesAsync().ContinueWithOnMainThread(task =>
-        {
-            Firebase.DependencyStatus dependencyStatus = task.Result;
-            if (dependencyStatus == Firebase.DependencyStatus.Available)
-            {
-                InitializeFirebase();
-            }
-            else
-            {
-                Debug.LogError(
-                    "Could not resolve all Firebase dependencies: " + dependencyStatus);
-            }
-        });
+        // Set the file path where sign-up information will be stored
+        filePath = Path.Combine(Application.dataPath, folderName, fileName);
+
+        Debug.Log("File path: " + Application.persistentDataPath);
+
     }
 
-     void InitializeFirebase()
+    public void onClickLogin()
     {
-        auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
-        auth.StateChanged += AuthStateChanged;
-        AuthStateChanged(this, null);
+        SceneManager.LoadScene("Scenes/Login");
     }
-
-     void AuthStateChanged(object sender, System.EventArgs eventArgs)
+    public void onClickSignup()
     {
-        if (auth.CurrentUser != user)
-        {
-            bool signedIn = user != auth.CurrentUser && auth.CurrentUser != null;
-            if (!signedIn && user != null)
-            {
-                Debug.Log("Signed out " + user.UserId);
-            }
-            user = auth.CurrentUser;
-
-            if (signedIn)
-            {
-                Debug.Log("Signed in " + user.UserId);  
-            }
-        }
+        SceneManager.LoadScene("Scenes/Register");
     }
 
+    
     public void onContinueLogin()
     {
-        
-        StartCoroutine(LoginAsync(emailInputField.text,passwordInputField.text));
+        string email = emailInputField.text;
+        string password = passwordInputField.text;
 
-    }
-    private IEnumerator LoginAsync(string email,string password)
-    {
-        var loginTask = auth.SignInWithEmailAndPasswordAsync(email,password);
-
-        yield return new WaitUntil(() => loginTask.IsCompleted);
-
-        if (loginTask.Exception != null)
+        // Check if login credentials match sign-up information
+        if (CheckLoginCredentials(email, password))
         {
-            Debug.LogError(loginTask.Exception);
-
-            FirebaseException firebaseException = loginTask.Exception.GetBaseException() as FirebaseException;
-            AuthError authError = (AuthError)firebaseException.ErrorCode;
-
-            string failedMessage = "Login Failed! Because ";
-
-            switch (authError)
-            {
-                case AuthError.InvalidEmail:
-                    failedMessage += "Email is invalid";
-                    break;
-                case AuthError.WrongPassword:
-                    failedMessage += "Wrong Password";
-                    break;
-                case AuthError.MissingEmail:
-                    failedMessage += "Email is missing";
-                    break;
-                case AuthError.MissingPassword:
-                    failedMessage += "Password is missing";
-                    break;
-                default:
-                    failedMessage += "Login failed";
-                    break;
-            }
-            Debug.Log(failedMessage);
+            Debug.Log("Login successful");
+            SceneManager.LoadScene("Scenes/Main Menu");
         }
         else
         {
-            AuthResult authResult = loginTask.Result;
-            user = authResult.User;
-
-            Debug.LogFormat("{0} You Are Successfully Logged in", user.DisplayName);
-            SceneManager.LoadScene("Scenes/Main Menu");
+            Debug.LogError("Login failed: Invalid credentials");
+            errorText.text = "Login failed: Invalid credentials";
         }
     }
+
+    private bool CheckLoginCredentials(string email, string password)
+{
+    // Read sign-up information from file
+    string[] lines = File.ReadAllLines(filePath);
+
+    // Iterate over the lines in pairs (email and password)
+    for (int i = 2; i < lines.Length; i += 2)
+    {
+        // Extract email and password from the current pair of lines
+        string storedEmail = lines[i].Trim();
+        string storedPassword = lines[i + 1].Trim();
+
+        // Check if the provided email and password match the stored values
+        if (email == storedEmail && password == storedPassword)
+        {
+            return true; // Credentials match
+        }
+    }
+
+    return false; // No matching credentials found
 }
+
+
+
+    public void removeErrorText()
+    {
+        errorText.text = "";
+    }
+}
+
+
 
