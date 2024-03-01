@@ -3,38 +3,33 @@ using System.IO;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UIElements;
+using PlayFab;
+using PlayFab.ClientModels;
+using UnityEngine.SceneManagement;
 
-public class WriteText : MonoBehaviour
-{
-    [SerializeField] private List<TMP_InputField> txtInputs;// Use a list for multiple input fields
-    private string folderName = "TextFiles";
-    private string fileName = "append.txt";
-    private string appendFile;
-    
+public class WriteText : MonoBehaviour{
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        appendFile = Path.Combine(Application.dataPath, folderName, fileName);
+    public static WriteText Instance;
+
+    void Awake(){
+        Instance = this;
     }
-
-    // Update is called once per frame
-
-    public void AppendText()
-    {
-        foreach (var txtInput in txtInputs)
-        {
-            if (!File.Exists(appendFile))
-            {
-                File.WriteAllText(appendFile, txtInput.text);
-            }
-            else
-            {
-                using (var writer = new StreamWriter(appendFile, true))
-                {
-                    writer.WriteLine(txtInput.text);
-                }
-            }
+    public void createAccount(string username, string emailAddress, string password){
+        PlayFabClientAPI.RegisterPlayFabUser(
+        new RegisterPlayFabUserRequest(){
+            Email = emailAddress,
+            Password = password,
+            Username = username,
+           // RequireBothUsernameAndEmail = true,
+        },
+        response =>{
+            Debug.Log($"Successful Account Creation: {username},{emailAddress}");
+            SceneManager.LoadScene("Scenes/Login");
+        },
+        error =>{
+            Debug.Log($"Unsuccessful Account Creation: {username},{emailAddress} \n {error.ErrorMessage}");
         }
+        );
+
     }
 }
