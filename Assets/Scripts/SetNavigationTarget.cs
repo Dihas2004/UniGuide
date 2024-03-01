@@ -45,12 +45,22 @@ public class SetNavigationTarget : MonoBehaviour
 
     public void SetCurrentNavigationTarget(int selectedValue)
     {
+        for (int i = 0; i < navigationTargetObjects.Count; i++)
+        {
+            if (navigationTargetObjects[i].Name != name)
+            {
+                Renderer objectRenderer = navigationTargetObjects[i].PositionObject.GetComponent<Renderer>();
+                objectRenderer.enabled = true;
+
+            }
+        }
         targetPosition = Vector3.zero;
         string selectedText = navigationTargetDropDown.options[selectedValue].text;
         Target currentTarget = navigationTargetObjects.Find(x => x.Name.Equals(selectedText));
         if (currentTarget!=null)
         {
             targetPosition = currentTarget.PositionObject.transform.position;
+            OtherTargetsInvisible(selectedText);
         }
     }
 
@@ -58,6 +68,18 @@ public class SetNavigationTarget : MonoBehaviour
     {
         lineToggle = !lineToggle;
         line.enabled = lineToggle;
+    }
+    private void OtherTargetsInvisible(string name)
+    {
+        for (int i = 0; i < navigationTargetObjects.Count; i++)
+        {
+            if (navigationTargetObjects[i].Name != name)
+            {
+                Renderer objectRenderer = navigationTargetObjects[i].PositionObject.GetComponent<Renderer>();
+                objectRenderer.enabled = false;
+
+            }
+        }
     }
 
 }
