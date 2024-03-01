@@ -341,7 +341,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 921400788}
         m_TargetAssemblyTypeName: ScreenLoader, Assembly-CSharp
-        m_MethodName: GoToNavFloor1
+        m_MethodName: GoToNavFloorGround
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

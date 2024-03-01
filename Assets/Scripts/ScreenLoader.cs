@@ -43,7 +43,7 @@ public class ScreenLoader : MonoBehaviour
 
     public void GoTo3DLayout()
     {
-        SceneManager.LoadScene("Scenes/3D Layout");
+        SceneManager.LoadScene("Scenes/3D model placement");
     }
 
     public void GoToNavList()
