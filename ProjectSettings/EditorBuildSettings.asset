@@ -17,28 +17,28 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: 322b0eb08b8155b4ba6db7767a42e19c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Nav - 1st Floor.unity
     guid: aea2423565e1743418576f63983b2e79
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Splash Screen.unity
     guid: 98bb2f43462f91a43a0a4fb40d70261b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Nav - Ground Floor -1.unity
     guid: fce201c36b8f88848ba0046cd45a3968
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Nav - 2nd floor.unity
     guid: 53c9178dd21a20d4d8e938fae1903106
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Nav- 3rd floor.unity
     guid: b0978cf1413dfa9459c1d17a5501e56f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/3D model placement.unity
     guid: f65cd21a59826b74e870741c60042790
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Navigation List.unity
     guid: c82e5ca887fcadc4db5713c4eabc01eb
   m_configObjects:
