@@ -6,10 +6,14 @@ using UnityEngine.UIElements;
 using PlayFab;
 using PlayFab.ClientModels;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class WriteText : MonoBehaviour{
 
     public static WriteText Instance;
+
+    
+    public static UnityEvent<string> OncreateAccountFailed = new UnityEvent<string>();
 
     void Awake(){
         Instance = this;
@@ -28,6 +32,7 @@ public class WriteText : MonoBehaviour{
         },
         error =>{
             Debug.Log($"Unsuccessful Account Creation: {username},{emailAddress} \n {error.ErrorMessage}");
+            OncreateAccountFailed.Invoke(error.ErrorMessage);
         }
         );
 
