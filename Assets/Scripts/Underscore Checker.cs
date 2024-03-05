@@ -14,18 +14,19 @@ public class UnderscoreChecker : MonoBehaviour
 
     private void OnInputValueChanged(string newValue)
     {
-        // Check if the input contains underscores
+        // Check if the input contains underscores or @ signs
         bool hasUnderscores = newValue.Contains("_");
+        bool hasAtSigns = newValue.Contains("@");
 
-        // Update the result text and color based on the presence of underscores
-        if (hasUnderscores)
+        // Update the result text and color based on the presence of underscores or @ signs
+        if (hasUnderscores || hasAtSigns)
         {
-            resultText.text = "Underscores(_) not allowed";
+            resultText.text = "Underscores(_) or @ signs are not allowed";
             resultText.color = Color.red;
         }
         else
         {
-            resultText.text = "No Underscores(_) found";
+            resultText.text = "No Underscores(_) or @ signs found";
             resultText.color = Color.green;
         }
     }
