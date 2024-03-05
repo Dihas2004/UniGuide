@@ -9,8 +9,10 @@ public class UI_Sign_up : MonoBehaviour
 
     [SerializeField]
     public TMP_Text errorText;
-    // [SerializeField]
-    // Text errorText;
+
+    [SerializeField]
+    public TMP_Text welcomeText;
+ 
     [SerializeField]
     Canvas canvas;
     string username, password, emailAddress;
@@ -28,7 +30,9 @@ public class UI_Sign_up : MonoBehaviour
     }
 
     void OnSignInSuccess(){
-      canvas.enabled = false;
+        canvas.enabled = false;
+        welcomeText.text = "Welcome to uniguide, " + username; // Display welcome message with username
+        welcomeText.gameObject.SetActive(true);
     }
 
     public void UpdateUsername(string _username){
