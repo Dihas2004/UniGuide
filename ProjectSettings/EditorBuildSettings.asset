@@ -17,10 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Nav - 1st Floor.unity
     guid: aea2423565e1743418576f63983b2e79
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Splash Screen.unity
     guid: 98bb2f43462f91a43a0a4fb40d70261b
   - enabled: 0
